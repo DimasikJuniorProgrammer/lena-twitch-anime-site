@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Моя аниме-страница</title>
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center;
+    font-family:Arial,sans-serif; color:white; overflow:hidden;
+    background:
+      radial-gradient(circle at 20% 20%,rgba(180,70,255,.25),transparent 30%),
+      radial-gradient(circle at 80% 80%,rgba(70,180,255,.2),transparent 30%),
+      linear-gradient(135deg,#090517,#170b2e 50%,#080b20);
+}
+body:before,body:after{
+    content:""; position:fixed; width:300px;height:300px;border-radius:50%;
+    filter:blur(90px); opacity:.25; pointer-events:none;
+}
+body:before{background:#d84cff;top:-100px;left:-100px}
+body:after{background:#4c8cff;bottom:-100px;right:-100px}
+
+.card{
+    position:relative; width:90%; max-width:620px; padding:42px 35px;
+    text-align:center; background:rgba(20,13,45,.72);
+    border:1px solid rgba(255,130,230,.45); border-radius:28px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 0 45px rgba(170,70,255,.28),inset 0 0 35px rgba(255,100,220,.04);
+    animation:appear .8s ease;
+}
+@keyframes appear{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:none}}
+
+.avatar{
+    width:135px;height:135px;object-fit:cover;border-radius:50%;
+    border:3px solid #ff83e8; box-shadow:0 0 28px #b94cff;
+    margin-bottom:15px;
+}
+h1{
+    margin:5px 0;font-size:40px;
+    background:linear-gradient(90deg,#ff7be5,#a879ff,#6ee7ff);
+    -webkit-background-clip:text;color:transparent;
+}
+.line{width:90px;height:3px;margin:15px auto 20px;
+    background:linear-gradient(90deg,transparent,#ff70df,transparent)}
+.subtitle{color:#cfc4e8;font-size:18px;margin-bottom:22px}
+.description{line-height:1.7;color:#eee;margin:auto;max-width:520px}
+.tags{margin-top:25px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.tag{
+    padding:8px 15px;border-radius:20px;background:rgba(180,80,255,.13);
+    border:1px solid rgba(220,130,255,.45);color:#ead1ff
+}
+.links{margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.links a{
+    padding:10px 20px;color:white;text-decoration:none;border-radius:12px;
+    background:linear-gradient(135deg,#914cff,#e64cff);
+    transition:.25s;box-shadow:0 0 0 rgba(230,80,255,0)
+}
+.links a:hover{transform:translateY(-3px);box-shadow:0 0 22px rgba(230,80,255,.65)}
+.note{margin-top:22px;font-size:12px;color:#8e84a5}
+@media(max-width:500px){.card{padding:30px 18px}h1{font-size:31px}.avatar{width:115px;height:115px}}
+</style>
+</head>
+<body>
+
+<main class="card">
+
+    <!-- ================================
+         НАСТРОЙ СВОЮ СТРАНИЦУ ЗДЕСЬ
+         ================================ -->
+
+    <!-- Можно заменить ссылку на любую картинку -->
+    <img class="avatar"
+         src="https://static-cdn.jtvnw.net/jtv_user_pictures/2ab46285-43d7-4994-ba1e-3bcec74dffa0-profile_image-70x70.png"
+         alt="Аватар">
+
+    <!-- ТВОЁ ИМЯ -->
+    <h1>MyAkir1</h1>
+
+    <div class="line"></div>
+
+    <!-- КОРОТКАЯ ИНФОРМАЦИЯ -->
+    <div class="subtitle">
+        Студент • Стример • Любитель аниме и дотки
+    </div>
+
+    <!-- РАССКАЗ О СЕБЕ -->
+    <p class="description">
+        Привет! Меня зовут Ленчик.
+        Я занимаюсь стримами, интересуюсь твичом,
+        играми, аниме и созданием различнх завозов.
+    </p>
+
+    <!-- ТВОИ ИНТЕРЕСЫ -->
+    <div class="tags">
+        <span class="tag">💜 Твич</span>
+        <span class="tag">🎮 Игры</span>
+        <span class="tag">🎌 Аниме</span>
+    </div>
+
+    <!-- ТВОИ ССЫЛКИ -->
+    <div class="links">
+        <a href="https://t.me/+cQvk2jA4kiZjZWMy" target="_blank">Telegram</a>
+    </div>
+
+    <div class="note">
+        Сделано с ❤️!
+    </div>
+</main>
+
+</body>
+</html>
